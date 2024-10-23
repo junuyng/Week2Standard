@@ -5,13 +5,10 @@ public class MonsterQuestDataSO : QusetDataSO
 {
     public string monsterType;
     public int requiredMonsterKills;
-
-
-    public override string GetQuestInfo()
+    
+    protected override string QuestInfo()
     {
-        string questInfo = base.GetQuestInfo();
-        questInfo = questInfo + $"\n{monsterType}를 {requiredMonsterKills}마리 소탕";
-        return questInfo;
+        return $"{monsterType}를 {requiredMonsterKills}마리 소탕";
     }
     
 }

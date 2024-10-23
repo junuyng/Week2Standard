@@ -19,13 +19,9 @@ public class QuestManager : MonoBehaviour
 
                 if (instance == null)
                 {
-                    GameObject QuestManager = new GameObject();
-                    QuestManager.name = "QuestManager";
-                    QuestManager.AddComponent<QuestManager>();
-
-                    instance = QuestManager.GetComponent<QuestManager>();
+                    GameObject QuestManager = new GameObject("QuestManager");
+                    instance = QuestManager.AddComponent<QuestManager>();
                 }
-
             }
 
             return instance;

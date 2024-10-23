@@ -7,8 +7,7 @@ public class ObjectPool : MonoBehaviour
     [SerializeField] private GameObject[] prefabs;
 
     public Dictionary<string, List<GameObject>> pools = new Dictionary<string, List<GameObject>>();
-
-
+    
     private void Start()
     {
         CreatePool("Monster", prefabs[0]);
@@ -34,8 +33,6 @@ public class ObjectPool : MonoBehaviour
         }
     }
 
-    
-    //pool을 사용해보는 로직 만들기 ? button 통해서 한번 사용해보도록 
     
     private void CreatePool(string key, GameObject prefab)
     {
